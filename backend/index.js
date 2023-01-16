@@ -5,7 +5,7 @@ require('dotenv').config()
 const routerModels = require('./routes/models.router');
 
 const app = express()
-const PORT = process.env.PORT || 8000
+const PORT123 = process.env.PORT || 8000
 
 /*
 Cors Settings
@@ -62,6 +62,6 @@ app.get('/', ({ res }) => {
 routerModels(app) //Here we can add others
 // errorHandlerRouter(app)
 
-app.listen(PORT, () => {
-  console.log(`Server on HOST: http://localhost:${PORT}`)
+app.listen(PORT123, () => {
+  console.log(`Server on HOST: http://localhost:${PORT123}`)
 })
