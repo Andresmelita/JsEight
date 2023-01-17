@@ -5,8 +5,8 @@ const Login = () => {
   return (
     <div className="login__page h-screen flex items-center">
       <div className='login__card flex flex-col md:flex-row xs:m-auto md:m-0 w-screen'>
-        <div className="login__image hidden md:block w-1/2 lg:w-2/5 h-screen overflow-hidden">
-          <img src="/login_img.jpg" alt="" />
+        <div className="login__image hidden bg-[url('/login_img.jpg')] bg-cover bg-center md:block w-1/2 lg:w-2/5 h-screen overflow-hidden">
+          {/* <img className='' src="/login_img.jpg" alt="" /> */}
         </div>
         <div className="login__body flex flex-col xs:m-auto xs:w-80 md:w-1/2 md:p-10 md:h-screen lg:w-3/5 overflow-hidden">
           <div className="login__header md:h-1/4">
