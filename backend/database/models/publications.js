@@ -64,7 +64,7 @@ module.exports = (sequelize, DataTypes) => {
       no_timestamps: {
         attributes: { exclude: ['created_at', 'updated_at'] }
       },
-    },
+    }
   })
   return Publications
 }
