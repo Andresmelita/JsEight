@@ -299,47 +299,47 @@ const options = {
           operationId: ' ??? ',
           responses: {
             200: {
-                description: "Successful operation",
-                content: {
-                    "application/json": {
-                        schema: {
-                            type: "array",
-                            items: {
-                                properties: {
-                                    id: {
-                                        type: 'string', example: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-                                    },
-                                    firstName: {
-                                        type: 'string', example: "Name"
-                                    },
-                                    lastName: {
-                                        type: 'string', example: "LastName"
-                                    },
-                                    email: {
-                                        type: 'string', format: "date", example: "unknown@email.com"
-                                    },
-                                    gender: {
-                                        type: 'string', example: "male"
-                                    },
-                                    birthday: {
-                                        type: "string", format: "date", example: "1925-12-12"
-                                    },
-                                    nickName: {
-                                        type: 'string', example: "aka"
-                                    },
-                                    isVerified: {
-                                        type: 'boolean', example: "false"
-                                    }
-                                }
-                            }
+              description: "Successful operation",
+              content: {
+                "application/json": {
+                  schema: {
+                    type: "array",
+                    items: {
+                      properties: {
+                        id: {
+                          type: 'string', example: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+                        },
+                        firstName: {
+                          type: 'string', example: "Name"
+                        },
+                        lastName: {
+                          type: 'string', example: "LastName"
+                        },
+                        email: {
+                          type: 'string', format: "date", example: "unknown@email.com"
+                        },
+                        gender: {
+                          type: 'string', example: "male"
+                        },
+                        birthday: {
+                          type: "string", format: "date", example: "1925-12-12"
+                        },
+                        nickName: {
+                          type: 'string', example: "aka"
+                        },
+                        isVerified: {
+                          type: 'boolean', example: "false"
                         }
+                      }
                     }
+                  }
                 }
+              }
             },
             400: {
-                description: "Invalid ID supplied"
+              description: "Invalid ID supplied"
             }
-        }
+          }
         },
         post: {
           tags: [
@@ -351,29 +351,29 @@ const options = {
           requestBody: {
             description: "After registering, a verification email will be sent to your email",
             content: {
-                "application/json": {
-                    schema: {
-                        "$ref": "#/components/schemas/user"
-                    }
+              "application/json": {
+                schema: {
+                  "$ref": "#/components/schemas/user"
                 }
+              }
             },
             required: true
-        },
-        responses: {
-          201: {
+          },
+          responses: {
+            201: {
               description: "Successful operation",
               content: {
-                  "application/json": {
-                      schema: {
-                          "$ref": "#/components/schemas/user"
-                      }
+                "application/json": {
+                  schema: {
+                    "$ref": "#/components/schemas/user"
                   }
+                }
               }
-          },
-          400: {
+            },
+            400: {
               description: "Invalid ID supplied"
+            }
           }
-      } 
         }
       },
       '/api/v1/publications/{publication_id}': {
@@ -493,7 +493,7 @@ const swaggerDocs = (app, /*port*/) => {
     res.send(swaggerSpec)
   })
   console.log(
-    `SWAGGER HOST: /api/v1/docs `
+    `SWAGGER HOST: /api/v1/docs`
   )
 }
 
