@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
       Publications.belongsTo(models.Publications_types, { as: 'publication_type', foreignKey: 'publication_type_id' })
       Publications.belongsTo(models.Cities, { as: 'cyty', foreignKey: 'city_id' })
       Publications.hasMany(models.Votes, { as: 'votes', foreignKey: 'publication_id' })
-      Publications.belongsToMany(models.Tags, {as: 'tags', through: models.PublicationTags, foreignKey: 'publication_id'})
+      Publications.belongsToMany(models.Tag, {as: 'tags', through: models.PublicationTag, foreignKey: 'publication_id'})
     }
   }
   Publications.init({

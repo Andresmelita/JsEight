@@ -6,20 +6,17 @@ const { CustomError } = require('../utils/custom-error')
 class PublicationsTypesService {
 
   constructor() {
-
   }
 
   async findAndCount(query) {
     const options = {
       where: {},
     }
-
     const { limit, offset } = query
     if (limit && offset) {
       options.limit = limit
       options.offset = offset
     }
-
     const { name } = query
     if (name) {
       options.where.name = { [Op.iLike]: `%${name}%` }
@@ -27,7 +24,6 @@ class PublicationsTypesService {
 
     //Necesario para el findAndCountAll de Sequelize
     options.distinct = true
-
     const publicationsTypes = await models.Publications_types.findAndCountAll(options)
     return publicationsTypes
   }

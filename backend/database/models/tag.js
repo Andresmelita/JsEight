@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'Tag',
+    modelName: 'Tag',     
     tableName: 'tags',  // y la tabla en la DB para ser explicitos
     underscored: true,
     timestamps: true,
